@@ -1,0 +1,165 @@
+.recommendations-page {
+  min-height: calc(100vh - 80px);
+  padding: 2rem 0;
+  background: var(--surface);
+}
+
+.recommendations-header {
+  margin-bottom: 2rem;
+}
+
+.recommendations-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.recommendations-header p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.recommendations-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+}
+
+.recommendations-sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.recommendations-sidebar h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.recommendations-sidebar small {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.recommendations-content {
+  min-height: 500px;
+}
+
+.ai-response {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+
+.ai-response pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  font-family: inherit;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.recommended-jobs {
+  margin-top: 2rem;
+}
+
+.recommended-jobs h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.jobs-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.job-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: all 0.3s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.job-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+.job-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.job-card-header h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.job-company {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.job-location {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  margin-bottom: 0.5rem;
+}
+
+.job-salary {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.job-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  padding: 0.25rem 0.75rem;
+  background: var(--surface);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+@media (max-width: 968px) {
+  .recommendations-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendations-sidebar {
+    position: static;
+  }
+}
